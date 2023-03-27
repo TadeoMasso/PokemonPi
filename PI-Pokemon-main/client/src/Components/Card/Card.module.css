@@ -1,0 +1,38 @@
+.card {
+  display: grid;
+  place-items: center;
+  min-height: 0vh;
+}
+.img{
+     position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 40%;
+    transform:
+      translateX(calc(var(--hover) * -15%))
+      scale(calc(1 + (var(--hover) * 0.2)));
+    transition: transform 0.2s; 
+    
+  }
+
+.figure {
+    width: 450px;
+    aspect-ratio: 8 / 5;
+    --bg: hsl(330 80% calc(90% - (var(--hover) * 10%)));
+    --accent: hsl(66, 87%, 25%);
+    transition: background 0.2s;
+    background:
+      radial-gradient(circle at top left, var(--accent), transparent 75%),
+      var(--bg);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+  }
+  .type{
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  
+  
